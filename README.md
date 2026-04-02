@@ -139,19 +139,21 @@ The dashboard comes pre-loaded with 72 realistic transactions spanning 6 months 
 
 The RBAC is simulated on the frontend:
 
-| Feature | Viewer | Admin |
-|---------|--------|-------|
-| View Dashboard | ✅ | ✅ |
-| View Transactions | ✅ | ✅ |
-| View Insights | ✅ | ✅ |
-| Add Transaction | ❌ | ✅ |
-| Edit Transaction | ❌ | ✅ |
-| Delete Transaction | ❌ | ✅ |
-| Export Data | ✅ | ✅ |
+| Feature              | Viewer            | Admin          |
+|----------------------|-------------------|----------------|
+| View Dashboard       | ✅                | ✅            |
+| View Transactions    | ✅                | ✅            |
+| View Insights        | ✅                | ✅            |
+| Add Transaction      | ❌                | ✅            |
+| Edit Transaction     | ❌                | ✅            |
+| Delete Transaction   | ❌                | ✅            |
+| Export Data          | ✅                | ✅            |
 
 ## 📦 Deployment
 
-The project is configured with `vite-plugin-singlefile` for easy deployment. The build output is a single HTML file that can be served from any static hosting service.
+The project is configured with `vite-plugin-singlefile` for easy deployment. A GitHub Actions workflow at [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds the app and publishes the `dist` folder to GitHub Pages.
+
+If you use GitHub Pages, set the repository Pages source to GitHub Actions so the deployed site serves the production build instead of the raw source files.
 
 ```bash
 npm run build
